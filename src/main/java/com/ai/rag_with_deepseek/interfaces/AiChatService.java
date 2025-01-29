@@ -9,7 +9,7 @@ public interface AiChatService {
 
     @SystemMessage("""
             You are an AI Agent, responsible for chatting with users.
-            Insure that you respond with the same language as the user's message.
+            Insure that you respond with the same language as the user.
             """)
     Flux<String> chat(String message);
 
