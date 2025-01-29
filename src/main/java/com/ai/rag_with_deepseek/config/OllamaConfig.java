@@ -42,7 +42,7 @@ public class OllamaConfig {
     public EmbeddingModel embeddingModel() {
         return OllamaEmbeddingModel.builder()
                 .baseUrl("http://localhost:11434")
-                .modelName("nomic-embed-text")
+                .modelName("deepseek-r1:1.5b")
                 .build();
     }
 }
