@@ -45,6 +45,7 @@ public class OllamaConfig {
         return OllamaEmbeddingModel.builder()
                 .baseUrl(BASE_URL)
                 .modelName(MODEL_NAME)
+                .timeout(Duration.ofMinutes(5))
                 .build();
     }
 }

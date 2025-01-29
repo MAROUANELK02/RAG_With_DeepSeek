@@ -31,7 +31,7 @@ public class ChatController {
 
     @PostMapping("/load")
     public Flux<String> load(@RequestParam(defaultValue = "What is the content of the document?") String message,
-                             @RequestParam("file") MultipartFile file) throws IOException {
+                             @RequestParam(value = "file", required = false) MultipartFile file) throws IOException {
         if(file == null || file.isEmpty()) {
             log.info("File is empty");
             return chatService.chat(message);
