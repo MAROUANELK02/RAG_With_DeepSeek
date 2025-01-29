@@ -13,36 +13,38 @@ import java.time.Duration;
 
 @Configuration
 public class OllamaConfig {
+    private String baseUrl = "http://localhost:11434";
+    private String modelName = "deepseek-r1:8b";
 
     @Bean
     public ChatLanguageModel chatLanguageModel() {
         return OllamaChatModel.builder()
-                .baseUrl("http://localhost:11434")
+                .baseUrl(baseUrl)
                 .temperature(0.0)
                 .logRequests(true)
                 .logResponses(true)
                 .timeout(Duration.ofMinutes(3))
-                .modelName("deepseek-r1:8b")
+                .modelName(modelName)
                 .build();
     }
 
     @Bean
     public StreamingChatLanguageModel streamingChatLanguageModel() {
         return OllamaStreamingChatModel.builder()
-                .baseUrl("http://localhost:11434")
+                .baseUrl(baseUrl)
                 .temperature(0.0)
                 .logRequests(true)
                 .logResponses(true)
                 .timeout(Duration.ofMinutes(3))
-                .modelName("deepseek-r1:8b")
+                .modelName(modelName)
                 .build();
     }
 
     @Bean
     public EmbeddingModel embeddingModel() {
         return OllamaEmbeddingModel.builder()
-                .baseUrl("http://localhost:11434")
-                .modelName("deepseek-r1:8b")
+                .baseUrl(baseUrl)
+                .modelName(modelName)
                 .build();
     }
 }
