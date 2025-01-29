@@ -2,7 +2,7 @@ package com.ai.rag_with_deepseek.web;
 
 import com.ai.rag_with_deepseek.interfaces.AiChatService;
 import com.ai.rag_with_deepseek.interfaces.Assistant;
-import com.ai.rag_with_deepseek.RagService;
+import com.ai.rag_with_deepseek.service.RagService;
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.memory.chat.ChatMemoryProvider;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
