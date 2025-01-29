@@ -22,7 +22,7 @@ public class OllamaConfig {
                 .logRequests(true)
                 .logResponses(true)
                 .timeout(Duration.ofMinutes(3))
-                .modelName("deepseek-r1:1.5b")
+                .modelName("deepseek-r1:8b")
                 .build();
     }
 
@@ -34,7 +34,7 @@ public class OllamaConfig {
                 .logRequests(true)
                 .logResponses(true)
                 .timeout(Duration.ofMinutes(3))
-                .modelName("deepseek-r1:1.5b")
+                .modelName("deepseek-r1:8b")
                 .build();
     }
 
@@ -42,7 +42,7 @@ public class OllamaConfig {
     public EmbeddingModel embeddingModel() {
         return OllamaEmbeddingModel.builder()
                 .baseUrl("http://localhost:11434")
-                .modelName("deepseek-r1:1.5b")
+                .modelName("deepseek-r1:8b")
                 .build();
     }
 }
