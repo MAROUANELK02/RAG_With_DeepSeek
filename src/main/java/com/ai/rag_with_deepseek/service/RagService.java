@@ -12,6 +12,7 @@ import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -47,7 +48,12 @@ public class RagService {
                 throw new IllegalArgumentException("La taille du fichier ne doit pas dépasser 3 Mo");
             }
 
-            String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
+            File directory = new File(UPLOAD_DIR);
+            if (!directory.exists()) {
+                directory.mkdirs();
+            }
+
+            String fileName = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
             Path filePath = Paths.get(UPLOAD_DIR, fileName);
 
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
