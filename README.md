@@ -22,6 +22,7 @@
     <li>JDK 17 or higher</li>
     <li>Maven</li>
     <li>Ollama installed and configured</li>
+    <li>Docker installed and runned</li>
 </ul>
 
 <h3>Installation</h3>
