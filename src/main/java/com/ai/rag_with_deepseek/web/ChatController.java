@@ -2,6 +2,7 @@ package com.ai.rag_with_deepseek.web;
 
 import com.ai.rag_with_deepseek.interfaces.AiChatService;
 import com.ai.rag_with_deepseek.service.RagService;
+import dev.langchain4j.data.document.BlankDocumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
