@@ -20,9 +20,9 @@ public class OllamaConfig {
     private static final String BASE_URL = "http://localhost:11434";
     private static final String MODEL_NAME = "deepseek-r1:1.5b";
 
-    private static final String apiKey = "AIzaSyC1a7MlpTVBWu5lJuAC8GRutiMzIb29cVA";
+    private static final String apiKey = "YOUR_API_KEY";
 
-    //@Bean
+    @Bean
     public ChatLanguageModel chatLanguageModel() {
         return OllamaChatModel.builder()
                 .baseUrl(BASE_URL)
@@ -34,7 +34,7 @@ public class OllamaConfig {
                 .build();
     }
 
-    //@Bean
+    @Bean
     public StreamingChatLanguageModel streamingChatLanguageModel() {
         return OllamaStreamingChatModel.builder()
                 .baseUrl(BASE_URL)
@@ -55,7 +55,7 @@ public class OllamaConfig {
                 .build();
     }
 
-    @Bean
+    //@Bean
     public ChatLanguageModel chatGeminiLanguageModel() {
         return GoogleAiGeminiChatModel.builder()
                 .apiKey(apiKey)
@@ -69,7 +69,7 @@ public class OllamaConfig {
                 .build();
     }
 
-    @Bean
+    //@Bean
     public StreamingChatLanguageModel streamingGeminiChatLanguageModel() {
         return GoogleAiGeminiStreamingChatModel.builder()
                 .apiKey(apiKey)
